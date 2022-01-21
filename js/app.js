@@ -45,9 +45,43 @@ player.draw()
 //recursive animation loop
 function animate() {
   requestAnimationFrame(animate)
-  //this clears the cavas
+  //this clears the canvas
   c.clearRect(0 , 0, canvas.width, canvas.height)
   player.update()
 }
 
 animate()
+
+//Here's a good way to find the key code
+// addEventListener('keydown', ({keyCode}) => {
+//   console.log(keyCode)
+// })
+
+// This is a good example of how the even listener works
+// addEventListener('keydown', ({keyCode}) => {
+//   console.log(keyCode)
+//   switch (keyCode) {
+//     case 65:
+//       console.log('left')
+//       break
+//   }
+// })
+
+
+addEventListener('keydown', ({keyCode}) => {
+  console.log(keyCode)
+  switch (keyCode) {
+    case 65:
+      console.log('left')
+      break
+      case 83:
+      console.log('down')
+      break
+      case 68:
+      console.log('right')
+      break
+      case 87:
+      console.log('up')
+      break
+  }
+})
