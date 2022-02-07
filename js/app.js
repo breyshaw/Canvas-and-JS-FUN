@@ -55,7 +55,7 @@ class Platform {
 }
 
 const player = new Player()
-const platforms = [new Platform({x: 100, y:600}), new Platform({x: 450, y: 400})]
+const platforms = [new Platform({x: 100, y:600}), new Platform({x: 450, y: 400}), new Platform({x: 750, y: 350})]
 const keys = {
   right: {
     pressed: false
@@ -134,7 +134,7 @@ addEventListener('keydown', ({ keyCode }) => {
       keys.right.pressed = true
       break
     case 87:
-      player.velocity.y -= 20
+      player.velocity.y -= 2
       break
   }
   console.log(keys.right.pressed)
