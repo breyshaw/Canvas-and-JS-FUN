@@ -55,6 +55,7 @@ class Platform {
 }
 
 const player = new Player()
+const platform = new Platform()
 const keys = {
   right: {
     pressed: false
@@ -71,6 +72,7 @@ function animate() {
   //this clears the canvas
   c.clearRect(0, 0, canvas.width, canvas.height)
   player.update()
+  platform.draw()
 
 
   if (keys.right.pressed) {
